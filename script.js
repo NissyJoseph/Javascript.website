@@ -29,7 +29,7 @@ document.getElementById('delete').addEventListener('click', () => {
             setTimeout(() => {
                 array.splice(index, 1);
                 updateDisplay();
-            }, 3000);
+            }, 2000);
             document.getElementById('inputField').value = '';
         } else {
             alert('Value not found in List.');
