@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Field & Input Manipulation</title>
+    
+    <style>
+      body {  
+        text-align: center;
+        font-weight: bolder;
+        padding: 60px;
+        font-size: larger;
+      }
+      input{
+        border-radius: 5px;
+      }
+      .manipulation {
+        font-weight: lighter;
+        padding: 10px;
+        margin-top: 20px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        display: block; 
+        border: 1px solid black; 
+        padding: 5px;
+        margin: 5px 0; 
+        width: fit-content; 
+      }
+    </style>
+</head>
+<body>
+
+    <label> Enter Array Button: </label>
+    <input type="text" id="inputField">
+    <button id="insert">Insert</button>
+    <button id="delete">Delete</button>
+    <button id="find">Find</button>
+    <button id="print">Print</button>
+
+    <div class="manipulation">
+        <p>Array is Empty</p>
+        <ul id="arrayList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
