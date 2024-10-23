@@ -1,21 +1,27 @@
+let inputField = document.getElementById('inputField')
+let insertValue = document.getElementById('insert');
+let deleteValue = document.getElementById('delete');
+let findValue = document.getElementById('find');
+let printValue = document.getElementById('print');
+
 let array = [];
 
-document.getElementById('insert').addEventListener('click', () => {
-    const value = document.getElementById('inputField').value;
+insertValue.addEventListener('click', () => {
+    const value = inputField.value;
         if (value) {
             array.push(value);
             updateDisplay();
             const listItems = document.querySelectorAll('#arrayList li');
-            const newItem = listItems[listItems.length - 1]; // Get the last added item
-            newItem.style.backgroundColor = 'green'; // Set green background for inserted value
-            document.getElementById('inputField').value = '';
+            const newItem = listItems[listItems.length - 1];
+            newItem.style.backgroundColor = 'green';
+            inputField.value = '';
         } else {
             alert('Please enter a value to insert.');
         }
 });
 
-document.getElementById('delete').addEventListener('click', () => {
-    const value = document.getElementById('inputField').value;
+deleteValue.addEventListener('click', () => {
+    const value = inputField.value;
     const index = array.indexOf(value);
         if (index !== -1) {
             const listItems = document.querySelectorAll('#arrayList li');
@@ -30,14 +36,14 @@ document.getElementById('delete').addEventListener('click', () => {
                 array.splice(index, 1);
                 updateDisplay();
             }, 2000);
-            document.getElementById('inputField').value = '';
+            inputField.value = '';
         } else {
             alert('Value not found in List.');
         }
 });
 
-document.getElementById('find').addEventListener('click', () => {
-    const value = document.getElementById('inputField').value;
+findValue.addEventListener('click', () => {
+    const value = inputField.value;
     const index = array.indexOf(value);
     const listItems = document.querySelectorAll('#arrayList li');
         if (index !== -1) {
@@ -47,7 +53,7 @@ document.getElementById('find').addEventListener('click', () => {
         }
 });
 
-document.getElementById('print').addEventListener('click', () => {
+printValue.addEventListener('click', () => {
     updateDisplay();
 });
 
